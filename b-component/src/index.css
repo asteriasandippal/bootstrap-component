@@ -3,3 +3,136 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+body, html {
+  height: 100%;
+}
+.page:before,
+.page:after {
+  content :'';
+  display : block;
+}
+.page:after {
+  clear: both;
+}
+.page {
+  height: 100%;
+}
+
+.left-column {
+  float: left;
+  min-width: 300px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  border-right: solid 1px #ececec;
+  background-color: #424242;
+  z-index: 1;
+}
+
+.sidebar {
+  padding: 30px 0;
+}
+.right-column {
+  margin-left: 300px;
+  position: relative;
+}
+.main {
+  padding: 30px;
+}
+.ul-listing {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.ul-listing__item {
+  display: block;
+  position: relative;
+}
+.ul-listing__item + .ul-listing__item {
+  border-top: solid 1px #515151;
+}
+.ul-listing__link {
+  display: block;
+  padding: 15px;
+  color: #fff;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  line-height: 1.4;
+  cursor: pointer;
+}
+.ul-listing__link.selected {
+  background-color: #333;
+}
+.component-main {
+  padding: 60px;
+}
+
+.component-header {
+  margin-bottom: 30px;
+  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
+}
+
+.component-header h2 {
+  margin: 0;
+  font-weight: 300;
+}
+
+/* ========================
+content-component STYLES
+=========================*/
+.content-component {
+  font-size: 16px;
+  line-height: 1.6;
+}
+.content-component__article {
+  margin-bottom: 1.5em;
+}
+.content-component__subtitle {
+  margin: 0 0 1em;
+  font-size: 24px;
+  font-weight: 300;
+  color: #20aeec;
+}
+/* CODE STYLES */
+.showcomponet-code {
+  margin-bottom: 1rem;
+  background-color: #f7f7f9;
+  padding: 20px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+.showcomponet-code pre {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  font-size: 95%;
+  overflow: auto;
+}
+.token.keyword {
+  color: #0234e1;
+}
+.token.function {
+  color: #d44950;
+}
+.token.string {
+  color: #0234e1;
+}
+.showcomponent {
+  padding: 20px;
+  background-color: #fff;
+  margin-bottom: 1em;
+  font-size: 16px;
+  line-height: 1.6;
+  border: 4px #f7f7f9 solid;
+}
+.showcomponent pre {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  font-size: 95%;
+  overflow: auto;
+}
