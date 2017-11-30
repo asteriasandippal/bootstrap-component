@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import '../../stylesheets/components/alert.css';
 
 function Alert(props) {
     const isClassName = props.className ? 'alert-'+ props.className : '';
@@ -14,7 +13,7 @@ function Alert(props) {
 
 Alert.defaultProps = {
     className: '',
-    children: 'Alert Box'
+    children: 'This is Alert Component!'
 };
 
 Alert.propTypes = {

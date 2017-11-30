@@ -34,6 +34,13 @@ body, html {
 .sidebar {
   padding: 30px 0;
 }
+.sidebar__title {
+  color: #fff;
+  padding: 0 15px 10px;
+  margin: 0 0 15px;
+  border-bottom: solid 1px #515151;
+  font-weight: 300;
+}
 .right-column {
   margin-left: 300px;
   position: relative;
@@ -105,6 +112,9 @@ content-component STYLES
   font-size: 16px;
   line-height: 1.6;
 }
+.showcomponet-code:empty {
+  display: none;
+}
 .showcomponet-code pre {
   margin: 0;
   padding: 0;
@@ -115,10 +125,14 @@ content-component STYLES
 .token.keyword {
   color: #0234e1;
 }
-.token.function {
+.token.function,
+.token.property {
   color: #d44950;
 }
 .token.string {
+  color: #0234e1;
+}
+.token.selector {
   color: #0234e1;
 }
 .showcomponent {
@@ -135,4 +149,29 @@ content-component STYLES
   background-color: transparent;
   font-size: 95%;
   overflow: auto;
+}
+.tabs-labels {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: right;
+}
+.tabs-labels li {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 13px;
+  margin: 3px 0 3px 3px;
+}
+.tabs-labels a {
+  display: block;
+  text-decoration: none;
+  padding: 6px 12px;
+  letter-spacing: 0.1em;
+  background-color: #f7f7f9;
+  border-radius: 4px;
+  color: #000;
+}
+.tabs-labels a:hover,
+.tabs-labels a.active {
+  background-color: #d5d5d5;
 }

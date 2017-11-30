@@ -8,9 +8,6 @@ class Components extends React.Component {
         return (
             <div className="components-container">
                 <ComponentsBlockWrapper>
-                    <ComponentsBlock title="Title">
-                        <AlertComponent/>
-                    </ComponentsBlock>
                     <ComponentsBlock title="Alert">
                         <AlertComponent/>
                     </ComponentsBlock>

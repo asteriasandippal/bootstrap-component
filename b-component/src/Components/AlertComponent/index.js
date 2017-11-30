@@ -1,12 +1,13 @@
 import React from 'react';
 import Alert from './Alert';
-import ContentComponent from './ContentComponent';
+import AlertContents from './AlertContents';
+import '../../stylesheets/components/alert.css';
 
 function AlertComponent (props) {
     return (
         <div className="AlertComponent">
             <Alert/>
-            <ContentComponent/>
+            <AlertContents/>
         </div>
     );
 }
