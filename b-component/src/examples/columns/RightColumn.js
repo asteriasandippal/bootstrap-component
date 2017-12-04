@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function RightColumn(props) {
     return (
@@ -9,5 +10,13 @@ function RightColumn(props) {
         </section>
     );
 }
+
+RightColumn.defaultProps = {
+    children: '',
+};
+
+RightColumn.propTypes = {
+    children: PropTypes.any,
+};
 
 export default RightColumn;

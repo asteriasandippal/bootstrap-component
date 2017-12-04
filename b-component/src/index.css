@@ -69,6 +69,13 @@ body, html {
   letter-spacing: 0.07em;
   line-height: 1.4;
   cursor: pointer;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  text-align: left;
+}
+.ul-listing__link:focus {
+  outline: 0;
 }
 .ul-listing__link.selected {
   background-color: #333;
@@ -167,11 +174,11 @@ content-component STYLES
   text-decoration: none;
   padding: 6px 12px;
   letter-spacing: 0.1em;
-  background-color: #f7f7f9;
+  background-color: #d5d5d5;
   border-radius: 4px;
   color: #000;
 }
 .tabs-labels a:hover,
 .tabs-labels a.active {
-  background-color: #d5d5d5;
+  background-color: #f7f7f9;
 }

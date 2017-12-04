@@ -1,34 +1,36 @@
 import React from 'react';
-import "prismjs";
-import {PrismCode} from "react-prism";
-import {ComponentsTabs, TabPanel} from '../common/ComponentsTabs';
+import 'prismjs';
+import { PrismCode } from 'react-prism';
+import { ComponentsTabs, TabPanel } from '../common/ComponentsTabs';
 
-class ContentComponent extends React.Component {
-    render() {
-        return (
-            <div className="content-component">
-                <article className="content-component__article">It is a long established fact that a reader will be distracted by the readable content of a 
-                    page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal 
-                    distribution of letters, as opposed to using 'Content here, content here'.</article>
-    
-                <h4 className="content-component__subtitle">Uses Component</h4>
-                <div className="content-component__showcomponent showcomponent">
-                    <PrismCode component="pre" className="language-javascript">
-                        {`<Alert>This is Alert Component!</Alert>
+function ContentComponent() {
+    return (
+        <div className="content-component">
+            <article className="content-component__article">
+                It is a long established fact that a reader will be distracted by the
+                readable content of a page when looking at its layout. The point of
+                using Lorem Ipsum is that it has a more-or-less normal
+                distribution of letters, as opposed to using Content here, content here.
+            </article>
+
+            <h4 className="content-component__subtitle">Uses Component</h4>
+            <div className="content-component__showcomponent showcomponent">
+                <PrismCode component="pre" className="language-javascript">
+                    {`<Alert>This is Alert Component!</Alert>
 
 <Alert className="[add custom class]">This is Alert Component!</Alert>`}
-                    </PrismCode>
-                </div>
-                <ComponentsTabs>
-                    <TabPanel label="JSX Code">
-                        <PrismCode component="pre" className="language-javascript">
-                            {`
+                </PrismCode>
+            </div>
+            <ComponentsTabs>
+                <TabPanel label="JSX Code">
+                    <PrismCode component="pre" className="language-javascript">
+                        {`
 import React from 'react';
 import PropTypes from 'prop-types';
 
 function Alert(props) {
-    const isClassName = props.className ? 'alert-'+ props.className : '';
-    const className = 'alert ' + isClassName;
+    const isClassName = props.className ? 'alert-' +props.className' : '';
+    const className = 'alert '+isClassName;
     return (
         <div className={className} role="alert">
             {props.children || ''}
@@ -38,22 +40,22 @@ function Alert(props) {
 
 Alert.defaultProps = {
     className: '',
-    children: 'Alert Box'
+    children: 'This is Alert Component!',
 };
 
 Alert.propTypes = {
-    className: PropTypes.string.isRequired,
-    children: PropTypes.any.isRequired
+    className: PropTypes.string,
+    children: PropTypes.any,
 };
 
 export default Alert;
 
-                            `}
-                        </PrismCode>
-                    </TabPanel>
-                    <TabPanel label="CSS Code">
-                        <PrismCode component="pre" className="language-css">
-                            {`
+                        `}
+                    </PrismCode>
+                </TabPanel>
+                <TabPanel label="CSS Code">
+                    <PrismCode component="pre" className="language-css">
+                        {`
 .alert {
     position: relative;
     padding: 15px 20px;
@@ -62,17 +64,14 @@ export default Alert;
     border-radius: 5px;
     background-color: #f1f1f1;
 }
-                            `}
-                        </PrismCode>
-                    </TabPanel>
-                </ComponentsTabs>
+                        `}
+                    </PrismCode>
+                </TabPanel>
+            </ComponentsTabs>
 
-                <div className="component-block content-component__component-block">
-                    
-                </div>
-            </div>
-        );
-    }
+            <div className="component-block content-component__component-block" />
+        </div>
+    );
 }
 
 export default ContentComponent;

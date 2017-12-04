@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 
 import ComponentsHeader from './ComponentsHeader';
 
-function ComponentsBlock (props) {
+function ComponentsBlock(props) {
     return (
         <div>
-            <ComponentsHeader title={props.title}/>
+            <ComponentsHeader title={props.title} />
             {props.children}
         </div>
     );
@@ -14,12 +14,12 @@ function ComponentsBlock (props) {
 
 ComponentsBlock.defaultProps = {
     title: '',
-    children: ''
+    children: '',
 };
 
-ComponentsBlock.prototypes = {
-    title: PropTypes.string.isRequired,
-    children: PropTypes.any.isRequired
+ComponentsBlock.propTypes = {
+    title: PropTypes.string,
+    children: PropTypes.any,
 };
 
 export default ComponentsBlock;
