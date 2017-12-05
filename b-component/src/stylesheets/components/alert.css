@@ -2,7 +2,43 @@
     position: relative;
     padding: 15px 20px;
     margin-bottom: 1rem;
-    border: 1px solid #e5e5e5;
+    border: 1px solid #dcdcdc;
     border-radius: 5px;
     background-color: #f1f1f1;
+}
+
+.alert-primary {
+    color: #004085;
+    background-color: #a7d0fa;
+    border-color: #7dbafd;
+}
+
+.alert-success {
+    color: #155724;
+    background-color: #c5ffd3;
+    border-color: #7aef95;
+}
+
+.alert-danger {
+    color: #721c24;
+    background-color: #fcb8be;
+    border-color: #ea818c;
+}
+
+.alert-warning {
+    color: #856404;
+    background-color: #f4e5b6;
+    border-color: #e8cf83
+}
+
+.alert-info {
+    color: #0c5460;
+    background-color: #a8e8f4;
+    border-color: #7ad1de;
+}
+
+.alert-light {
+    color: #818182;
+    background-color: #fefefe;
+    border-color: #fdfdfe;
 }

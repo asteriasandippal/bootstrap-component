@@ -5,7 +5,7 @@ import ComponentsHeader from './ComponentsHeader';
 
 function ComponentsBlock(props) {
     return (
-        <div>
+        <div className="component-wrapblock">
             <ComponentsHeader title={props.title} />
             {props.children}
         </div>

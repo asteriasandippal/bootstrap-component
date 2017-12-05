@@ -2,8 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function Alert(props) {
-    const isClassName = props.className ? `alert-${props.className}` : '';
-    const className = `alert ${isClassName}`;
+    const isAppearance = props.appearance ? `alert-${props.appearance}` : '';
+    const isClassName = props.className ? props.className : '';
+    const className = `alert ${isAppearance} ${isClassName}`;
     return (
         <div className={className} role="alert">
             {props.children || ''}
@@ -14,11 +15,13 @@ function Alert(props) {
 Alert.defaultProps = {
     className: '',
     children: 'This is Alert Component!',
+    appearance: '',
 };
 
 Alert.propTypes = {
     className: PropTypes.string,
     children: PropTypes.any,
+    appearance: PropTypes.string,
 };
 
 export default Alert;
