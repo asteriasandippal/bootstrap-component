@@ -1,0 +1,49 @@
+.badge {
+    display: inline-block;
+    padding: .3em .5em;
+    font-size: 75%;
+    font-weight: normal;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25rem;
+    background-color: #EBECF0;
+}
+
+.badge-primary {
+    color: #ffffff;
+    background-color: #004085;
+}
+
+.badge-danger {
+    color: #ffffff;
+    background-color: #721c24;
+}
+.button .badge {
+    background-color: #ffffff;
+    color: #004085;
+}
+
+.button {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.button-primary {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}

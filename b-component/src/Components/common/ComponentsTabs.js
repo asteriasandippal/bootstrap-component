@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 export function TabPanel(props) {
     return (
-        <div className="hello">
+        <div className="tab-pannel">
             {props.children}
         </div>
     );

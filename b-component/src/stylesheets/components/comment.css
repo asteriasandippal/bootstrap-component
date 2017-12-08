@@ -1,0 +1,58 @@
+.commit--block {
+    display: block;
+    position: relative;
+    background-color: #f1f1f1;
+    padding: 15px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    overflow: hidden;
+}
+.commit--block + .commit--block {
+    border-top: solid 1px #f3f3f3;
+}
+.comment__avatar {
+    margin: 0;
+    float: left;
+    width: 80px;
+}
+.comment__avatar img {
+    max-width: 100%;
+    height: auto;
+}
+.comment--avatar .comment__content {
+    margin-left: 100px;
+}
+.comment__content {
+    margin-left: 0;
+}
+.comment__heading {
+    margin: 0 0 5px;
+    font-size: 18px;
+    font-weight: inherit;
+    color: #007bff;
+}
+.comment__heading__link {
+    text-decoration: none;
+    color: #007bff; 
+}
+.comment__date {
+    margin: 0 0 10px;
+    font-size: 13px;
+}
+.comment__small {
+    background-color: #8e8d8d;
+    padding: 3px 7px;
+    margin-left: 8px;
+    color: #fff;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -o-border-radius: 3px;
+    font-size: 70%;
+}
+.comment__text {
+    font-size: 15px;
+}
+.comment__text p {
+    margin: 0 0 10px;
+}
