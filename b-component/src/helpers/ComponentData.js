@@ -19,6 +19,11 @@ const ComponentData = [
         component: 'CommentComponent',
         componentId: 4,
     },
+    {
+        name: 'Modal',
+        component: 'ModalComponent',
+        componentId: 5,
+    },
 ];
 
 export default ComponentData;

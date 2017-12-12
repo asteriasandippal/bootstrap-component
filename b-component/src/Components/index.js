@@ -6,6 +6,7 @@ import AlertComponent from './AlertComponent';
 import BadgeComponent from './BadgeComponent';
 import ButtonComponent from './ButtonComponent';
 import CommentComponent from './CommentComponent';
+import ModalComponent from './ModalComponent';
 
 function Components(props) {
     const levels = props.data.map((level) => {
@@ -35,6 +36,13 @@ function Components(props) {
             return (
                 <ComponentsBlock title={level.name} key={level.componentId}>
                     <CommentComponent />
+                </ComponentsBlock>
+            );
+
+        case 5:
+            return (
+                <ComponentsBlock title={level.name} key={level.componentId}>
+                    <ModalComponent />
                 </ComponentsBlock>
             );
 

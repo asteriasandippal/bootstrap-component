@@ -10,7 +10,6 @@ function Comment(props) {
     const isAvatarLink = props.target ?
         <a className="comment__heading__link" href={props.target}>{props.author}</a>
         : props.author;
-
     const isContent = props.content ?
         <div className="comment__text">{props.content}</div>
         : '';
