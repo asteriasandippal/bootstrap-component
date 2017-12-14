@@ -42,3 +42,20 @@
     background-color: #fefefe;
     border-color: #fdfdfe;
 }
+
+.alert__close {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.alert__close:hover,
+.alert__close:focus {
+    outline: none;
+}
+.alert__close svg {
+    width: 16px;
+}

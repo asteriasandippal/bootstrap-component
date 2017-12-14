@@ -53,7 +53,7 @@ function Components(props) {
 
     return (
         <div className="components-container">
-            <ComponentsBlockWrapper>
+            <ComponentsBlockWrapper data={props.data}>
                 {levels}
             </ComponentsBlockWrapper>
         </div>

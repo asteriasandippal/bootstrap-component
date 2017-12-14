@@ -176,19 +176,26 @@ content-component STYLES
   font-size: 95%;
   overflow: auto;
 }
-.tabs-labels {
+.tabs-labels,
+.ulbutton-toggle {
   list-style: none;
   padding: 0;
   margin: 0;
   text-align: right;
 }
-.tabs-labels li {
+.tabs-labels li,
+.ulbutton-toggle__button {
   display: inline-block;
   vertical-align: middle;
   font-size: 13px;
   margin: 3px 0 3px 3px;
 }
-.tabs-labels a {
+.ulbutton-toggle__button {
+  display: block;
+  text-align: left;
+}
+.tabs-labels a,
+.ulbutton-toggle__button a {
   display: block;
   text-decoration: none;
   padding: 6px 12px;
@@ -198,6 +205,35 @@ content-component STYLES
   color: #000;
 }
 .tabs-labels a:hover,
-.tabs-labels a.active {
+.tabs-labels a.active,
+.ulbutton-toggle__button a:hover,
+.ulbutton-toggle__button a.active {
   background-color: #f7f7f9;
+}
+.ulbutton-toggle__icon {
+  width: 18px;
+  height: 18px;
+  padding: 5px;
+  display: inline-block;
+  vertical-align: middle;
+  /* padding-left: 10px; */
+  transform: rotate(180deg);
+  transition: all 0.35s ease;
+}
+.ulbutton-toggle__button a.active .ulbutton-toggle__icon {
+  transform: rotate(0deg);
+}
+.componenttoggle {
+  transition: all 0.35s ease;
+  min-height: 0;
+  margin-bottom: 1rem;
+  background-color: #f7f7f9;
+  padding: 0 20px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+.componenttoggle.active {
+  transition: all 0.35s ease;
+  min-height: 100px;
+  padding: 20px;
 }
