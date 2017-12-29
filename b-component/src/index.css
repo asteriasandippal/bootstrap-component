@@ -200,9 +200,10 @@ content-component STYLES
   text-decoration: none;
   padding: 6px 12px;
   letter-spacing: 0.1em;
-  background-color: #d5d5d5;
+  background-color: #448aff;
   border-radius: 4px;
   color: #000;
+  transition: all 0.35s ease;
 }
 .tabs-labels a:hover,
 .tabs-labels a.active,

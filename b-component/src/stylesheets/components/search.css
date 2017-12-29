@@ -1,0 +1,74 @@
+.search {
+    position: relative;
+    margin-bottom: 20px;
+}
+.search__data .search__lists {
+    position: static;
+}
+.search__lists {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+.search__list {
+    display: block;
+    line-height: 1.5;
+}
+
+.search__list + .search__list {
+    border-top: solid 1px #f3f3f3;
+}
+.search__input {
+    display: block;
+    padding: 10px 15px;
+    width: 100%;
+    box-sizing: border-box;
+    border: solid 1px #dbdbdb;
+}
+.search__list a,
+.search__list span {
+    text-decoration: none;
+    color: #000000;
+    display: block;
+    padding: 10px 15px;
+}
+.search__list a:hover {
+    background-color: #e0e0e0;
+}
+.search__lists--row {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: flex-start;    
+    justify-content: stretch;
+    flex-wrap: wrap; 
+    flex-direction: row;
+    box-shadow: none;
+}
+.search__list--column {
+    width: 33.333%;
+    padding: 15px;
+    box-sizing: border-box;
+    border: none;
+}
+.search__list--column + .search__list--column {
+    border: none;
+}
+.search__title {
+    margin: 0 0 15px;
+    padding: 0;
+}
+.search__list--column .search__title a {
+    padding: 0;
+}
+.search__list--column .search__title a:hover {
+    background-color: transparent;
+    color: #434343;
+}
