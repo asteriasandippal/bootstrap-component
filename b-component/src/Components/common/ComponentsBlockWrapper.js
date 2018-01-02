@@ -2,23 +2,23 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function ComponentsBlockWrapper(props) {
-    const { children } = props;
-    return React.Children.map(children, (child, index) => {
-        const sectionId = `component-block${index + 1}`;
-        return (
-            <section id={sectionId} className="component-main">
-                {child}
-            </section>
-        );
-    });
+    const { children, data } = props;
+    const sectionID = data.map(id => id.component);
+    return React.Children.map(children, (child, index) => (
+        <section id={sectionID[index]} className="component-main">
+            {child}
+        </section>
+    ));
 }
 
 ComponentsBlockWrapper.defaultProps = {
     children: {},
+    data: {},
 };
 
 ComponentsBlockWrapper.porpTypes = {
     children: PropTypes.array.isRequired,
+    data: PropTypes.array.isRequired,
 };
 
 export default ComponentsBlockWrapper;

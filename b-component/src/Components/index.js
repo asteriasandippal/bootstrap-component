@@ -7,6 +7,11 @@ import BadgeComponent from './BadgeComponent';
 import ButtonComponent from './ButtonComponent';
 import CommentComponent from './CommentComponent';
 import ModalComponent from './ModalComponent';
+import TabComponent from './TabComponent';
+import TableComponent from './TableComponent';
+import DropdownComponent from './DropdownComponent';
+import SliderComponent from './SliderComponent';
+import SearchComponent from './SearchComponent';
 
 function Components(props) {
     const levels = props.data.map((level) => {
@@ -46,6 +51,38 @@ function Components(props) {
                 </ComponentsBlock>
             );
 
+        case 6:
+            return (
+                <ComponentsBlock title={level.name} key={level.componentId}>
+                    <TabComponent />
+                </ComponentsBlock>
+            );
+        case 7:
+            return (
+                <ComponentsBlock title={level.name} key={level.componentId}>
+                    <TableComponent />
+                </ComponentsBlock>
+            );
+        case 8:
+            return (
+                <ComponentsBlock title={level.name} key={level.componentId}>
+                    <DropdownComponent />
+                </ComponentsBlock>
+            );
+        case 9:
+            return (
+                <ComponentsBlock title={level.name} key={level.componentId}>
+                    <SliderComponent />
+                </ComponentsBlock>
+            );
+
+        case 10:
+            return (
+                <ComponentsBlock title={level.name} key={level.componentId}>
+                    <SearchComponent />
+                </ComponentsBlock>
+            );
+
         default:
             return 'Sorry do not match Component!';
         }
@@ -53,7 +90,7 @@ function Components(props) {
 
     return (
         <div className="components-container">
-            <ComponentsBlockWrapper>
+            <ComponentsBlockWrapper data={props.data}>
                 {levels}
             </ComponentsBlockWrapper>
         </div>

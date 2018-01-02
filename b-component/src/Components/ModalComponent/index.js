@@ -10,9 +10,9 @@ import {
     ComponentUsed }
     from '../common/ComponentContent';
 import {
-    ComponentsTabs,
-    TabPanel }
-    from '../common/ComponentsTabs';
+    ComponentButtonToggle,
+    ComponentToggleContent }
+    from '../common/ComponentButtonToggle';
 
 class ModalComponent extends React.Component {
     constructor(props) {
@@ -89,8 +89,8 @@ class ModalComponent extends React.Component {
 `}
                             </PrismCode>
                         </ComponentUsed>
-                        <ComponentsTabs>
-                            <TabPanel label="Used jsx">
+                        <ComponentButtonToggle>
+                            <ComponentToggleContent title="Use jsX Code">
                                 <PrismCode component="pre" className="language-javascript">
                                     {`export default class ComponentName extends React.Component {
     constructor(props) {
@@ -140,11 +140,12 @@ class ModalComponent extends React.Component {
             </div>
         );
     }
-}
-`}
+}`}
                                 </PrismCode>
-                            </TabPanel>
-                            <TabPanel label="Modal jsx">
+                            </ComponentToggleContent>
+                        </ComponentButtonToggle>
+                        <ComponentButtonToggle>
+                            <ComponentToggleContent title="Modal jsX Code">
                                 <PrismCode component="pre" className="language-javascript">
                                     {`import React from 'react';
 import PropTypes from 'prop-types';
@@ -269,101 +270,8 @@ Modal.propTypes = {
 export default Modal;
 `}
                                 </PrismCode>
-                            </TabPanel>
-                            <TabPanel label="CSS Code">
-                                <PrismCode component="pre" className="language-css">
-                                    {`.modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 9999;
-}
-.modal__background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.4);
-    visibility: hidden;
-    opacity: 0;
-    transition:visibility 0.3s ease, opacity 0.3s ease;
-}
-.modal__background--transparent {
-    background-color: transparent;
-}
-.modal-open .modal__background {
-    visibility:visible;
-    opacity:1;
-    transition-delay:0s;
-}
-.modal__box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    max-width: 550px;
-    z-index: 1;
-}
-.modal__content {
-    background-color: #fff;
-    position: relative;
-    margin-top: 30px;
-    transition:all 0.6s ease;
-    visibility: hidden;
-    opacity: 0;
-}
-.modal-open .modal__content {
-    margin-top: 0;
-    visibility:visible;
-    opacity:1;
-    transition-delay:0s;
-}
-.modal__header,
-.modal__body,
-.modal__footer {
-    padding: 15px;
-}
-.modal__header {
-    border-bottom: solid 1px #f4f4f4;
-    position: relative;
-}
-.modal__footer {
-    border-top: solid 1px #f4f4f4;
-}
-.modal__footer p {
-    margin: 0;
-}
-.modal__title {
-    margin: 0;
-    font-weight: 300;
-    font-size: 24px;
-}
-.modal__header .button,
-.modal__header button {
-    position: absolute;
-    right: 9px;
-    top: 16px;
-    margin: 0;
-    font-size: 40px;
-    padding: 0;
-    line-height: 0.8;
-    background-color: transparent;
-    border: none;
-    color: #448aff;
-}
-.modal__header .button:hover,
-.modal__header button:hover,
-.modal__header .button:focus,
-.modal__header button:focus {
-    color: #424242;
-}
-`}
-                                </PrismCode>
-                            </TabPanel>
-                        </ComponentsTabs>
+                            </ComponentToggleContent>
+                        </ComponentButtonToggle>
                     </ContentComponent>
                 </div>
             </div>

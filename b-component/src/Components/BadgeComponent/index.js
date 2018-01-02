@@ -10,9 +10,9 @@ import {
     ComponentUsed }
     from '../common/ComponentContent';
 import {
-    ComponentsTabs,
-    TabPanel }
-    from '../common/ComponentsTabs';
+    ComponentButtonToggle,
+    ComponentToggleContent }
+    from '../common/ComponentButtonToggle';
 
 function BadgeComponent() {
     return (
@@ -49,8 +49,8 @@ function BadgeComponent() {
 `}
                     </PrismCode>
                 </ComponentUsed>
-                <ComponentsTabs>
-                    <TabPanel label="JSX Code">
+                <ComponentButtonToggle>
+                    <ComponentToggleContent title="jsX Code">
                         <PrismCode component="pre" className="language-javascript">
                             {`import React from 'react';
 import PropTypes from 'prop-types';
@@ -79,38 +79,10 @@ Badge.propTypes = {
 };
 
 export default Badge;
-
                             `}
                         </PrismCode>
-                    </TabPanel>
-                    <TabPanel label="CSS Code">
-                        <PrismCode component="pre" className="language-css">
-                            {`.badge {
-    display: inline-block;
-    padding: .3em .5em;
-    font-size: 75%;
-    font-weight: normal;
-    line-height: 1;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: baseline;
-    border-radius: .25rem;
-    background-color: #EBECF0;
-}
-
-.badge-primary {
-    color: #ffffff;
-    background-color: #004085;
-}
-
-.badge-danger {
-    color: #ffffff;
-    background-color: #721c24;
-}
-                            `}
-                        </PrismCode>
-                    </TabPanel>
-                </ComponentsTabs>
+                    </ComponentToggleContent>
+                </ComponentButtonToggle>
             </ContentComponent>
             <hr />
             <ContentComponent>
@@ -127,16 +99,6 @@ export default Badge;
 </Button>
 `}
                     </PrismCode>
-                    <hr />
-                    <div>
-                        <PrismCode component="pre" className="language-css">
-                            {`.btn .badge {
-    background-color: #ffffff;
-    color: #004085;
-}
-                            `}
-                        </PrismCode>
-                    </div>
                 </ComponentUsed>
             </ContentComponent>
         </div>
